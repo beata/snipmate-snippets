@@ -438,9 +438,9 @@ snippet heado
 snippet head
 	<head>
 	  <meta charset="${1:UTF-8}">
-	  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
 	  <title>${2:`substitute(Filename('', 'Page Title'), '^.', '\u&', '')`}</title>
-	  <meta name="keyword" content="${3}">
+	  <meta name="keywords" content="${3}">
 	  <meta name="description" content="${4}">
 	  <meta name="viewport" content="${5:width=device-width,initial-scale=1}">
 	  <link rel="stylesheet" href="${6:css/style.css}">
