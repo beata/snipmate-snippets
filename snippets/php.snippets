@@ -77,7 +77,7 @@ snippet doc_c
 	 */
 	${1:}class ${2:}
 	{
-		${7}
+	    ${7}
 	} // END $1class $2
 # Constant Definition - post doc
 snippet doc_dp
@@ -128,7 +128,7 @@ snippet doc_h
 	 * @copyright ${4:$2}, `strftime('%d %B, %Y')`
 	 * @package ${5:default}
 	 */
-	
+
 # Interface
 snippet doc_i
 	/**
@@ -147,11 +147,11 @@ snippet class
 	 */
 	class ${2:ClassName}
 	{
-		${3}
-		function ${4:__construct}(${5:argument})
-		{
-			${6:// code...}
-		}
+	    ${3}
+	    function ${4:__construct}(${5:argument})
+	    {
+	        ${6:// code...}
+	    }
 	}
 # define(...)
 snippet def
@@ -161,97 +161,97 @@ snippet def?
 	${1}defined('${2}')${3}
 snippet wh
 	while (${1:/* condition */}) {
-		${2:// code...}
+	    ${2:// code...}
 	}
 # do ... while
 snippet do
 	do {
-		${2:// code... }
+	    ${2:// code... }
 	} while (${1:/* condition */});
 snippet if
 	if (${1:/* condition */}) {
-		${2:// code...}
+	    ${2:// code...}
 	}
 snippet ifil
 	<?php if (${1:/* condition */}): ?>
-		${2:<!-- code... -->}
+	    ${2:<!-- code... -->}
 	<?php endif; ?>
 snippet ife
 	if (${1:/* condition */}) {
-		${2:// code...}
+	    ${2:// code...}
 	} else {
-		${3:// code...}
+	    ${3:// code...}
 	}
 	${4}
 snippet ifeil
 	<?php if (${1:/* condition */}): ?>
-		${2:<!-- html... -->}
+	    ${2:<!-- html... -->}
 	<?php else: ?>
-		${3:<!-- html... -->}
+	    ${3:<!-- html... -->}
 	<?php endif; ?>
 	${4}
 snippet else
 	else {
-		${1:// code...}
+	    ${1:// code...}
 	}
 snippet elseif
 	elseif (${1:/* condition */}) {
-		${2:// code...}
+	    ${2:// code...}
 	}
 # Tertiary conditional
 snippet t
 	$${1:retVal} = (${2:condition}) ? ${3:a} : ${4:b};${5}
 snippet switch
 	switch ($${1:variable}) {
-		case '${2:value}':
-			${3:// code...}
-			break;
-		${5}
-		default:
-			${4:// code...}
-			break;
+	    case '${2:value}':
+	        ${3:// code...}
+	        break;
+	    ${5}
+	    default:
+	        ${4:// code...}
+	        break;
 	}
 snippet case
 	case '${1:value}':
-		${2:// code...}
-		break;${3}
+	    ${2:// code...}
+	    break;${3}
 snippet for
 	for ($${2:i} = 0; $$2 < ${1:count}; $$2${3:++}) {
-		${4: // code...}
+	    ${4: // code...}
 	}
 snippet foreach
 	foreach ($${1:variable} as $${2:value}) {
-		${3:// code...}
+	    ${3:// code...}
 	}
 snippet foreachil
 	<?php foreach ($${1:variable} as $${2:value}): ?>
-		${3:<!-- html... -->}
+	    ${3:<!-- html... -->}
 	<?php endforeach; ?>
 snippet foreachk
 	foreach ($${1:variable} as $${2:key} => $${3:value}) {
-		${4:// code...}
+	    ${4:// code...}
 	}
 snippet foreachkil
 	<?php foreach ($${1:variable} as $${2:key} => $${3:value}): ?>
-		${4:<!-- html... -->}
+	    ${4:<!-- html... -->}
 	<?php endforeach; ?>
 snippet fun
 	${1:public }function ${2:FunctionName}(${3})
 	{
-		${4:// code...}
+	    ${4:// code...}
 	}
 # $... = array (...)
 snippet array
 	$${1:arrayName} = array('${2}' => ${3});${4}
 snippet try
 	try {
-		${2}
+	    ${2}
 	} catch (${1:Exception} $e) {
 	}
 # lambda with closure
 snippet lambda
 	${1:static }function (${2:args}) use (${3:&$x, $y /*put vars in scope (closure) */}) {
-		${4}
+	    ${4}
 	};
 # pre_dump();
 snippet pd
@@ -264,8 +264,8 @@ snippet vd
 snippet vdd
 	var_dump(${1}); die(${2:});
 snippet http_redirect
-	header ("HTTP/1.1 301 Moved Permanently"); 
-	header ("Location: ".URL); 
+	header ("HTTP/1.1 301 Moved Permanently");
+	header ("Location: ".URL);
 	exit();
 # Getters & Setters
 snippet getset
@@ -276,7 +276,7 @@ snippet getset
 	 */
 	function get$1()
 	{
-		return $this->_$1;
+	    return $this->_$1;
 	}
 
 	/**
@@ -286,7 +286,7 @@ snippet getset
 	 */
 	function set$1($$1)
 	{
-		$this->_$1 = $$1;
+	    $this->_$1 = $$1;
 	}
 snippet rett
 	return true;
