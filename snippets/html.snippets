@@ -440,11 +440,17 @@ snippet head
 	  <meta charset="${1:UTF-8}">
 	  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
 	  <title>${2:`substitute(Filename('', 'Page Title'), '^.', '\u&', '')`}</title>
-	  <meta name="keywords" content="${3}">
+	  <meta name="keywords"    content="${3}">
 	  <meta name="description" content="${4}">
-	  <meta name="viewport" content="${5:width=device-width,initial-scale=1}">
+	  <meta name="viewport"    content="${5:width=device-width, initial-scale=1.0}">
 	  <link rel="stylesheet" href="${6:css/style.css}">
-	  ${7}
+	  <meta property="og:title" content="${7:$2}"/>
+	  <meta property="og:type" content="${8:article:blog:website}"/>
+	  <meta property="og:url" content="${9}"/>
+	  <meta property="og:image" content="${10}"/>
+	  <meta property="og:description" content="${11:$4}"/>
+	  <meta property="og:site_name" content="${12:$2}"/>
+	  ${13}
 	</head>
 snippet header
 	<header>
@@ -879,7 +885,7 @@ snippet gga
 	  s.parentNode.insertBefore(g,s)}(document,'script'));
 	</script>
 	${2}
-snippet ggjq
+snippet scriptjq
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/${1:1.7.1}/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/libs/jquery-${2:$1}.min.js"><\/script>')</script>
 	${3}
