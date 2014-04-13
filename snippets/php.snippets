@@ -261,8 +261,14 @@ snippet pdd
 	echo '<pre>'; var_dump(${1}); echo '</pre>'; die(${2:});
 snippet vd
 	var_dump(${1});
+snippet xvd
+	xdebug_var_dump(${1});
 snippet vdd
 	var_dump(${1}); die(${2:});
+snippet pr
+	print_r(${1});
+snippet ppr
+	echo '<pre>', print_r(${1}, true), '</pre>';
 snippet http_redirect
 	header ("HTTP/1.1 301 Moved Permanently");
 	header ("Location: ".URL);
